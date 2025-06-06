@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="O Laboratório JJM é referência em prótese dentária em Valongo. Qualidade, estética e tecnologia de ponta desde 2014. Atendimento para clínicas e dentistas." />
+  <title>Laboratório JJM | Prótese Dentária em Valongo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Dados estruturados SEO local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "Laboratório JJM",
+    "image": "https://www.LabJJm.com/imagens/logo-jjm.jpeg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua da Suavinha 399",
+      "addressLocality": "Valongo",
+      "postalCode": "4440-572",
+      "addressCountry": "PT"
+    },
+    "telephone": "+351918028291",
+    "email": "info@labjjm.com",
+    "url": "https://www.labjjm.com",
+    "openingHours": "Mo-Fr 09:00-13:00,14:00-18:00"
+  }
+  </script>
+
+  <style>
+    /* Importa fonte do Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    /* Reset e base */
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: #3a3a3a;
+      color: #eee;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      color: #8bc34a;
+      margin-bottom: 0.5em;
+      font-weight: 700;
+    }
+
+    /* Header */
+    header {
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      border-bottom: 3px solid #8bc34a;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 10;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 55px;
+      transition: transform 0.3s ease;
+    }
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: #8bc34a;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .menu-toggle:hover {
+      color: #d1e79a;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 65px;
+      right: 20px;
+      background-color: #333;
+      padding: 20px 25px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      transition: opacity 0.4s ease;
+      opacity: 0;
+      pointer-events: none;
+      min-width: 160px;
+      z-index: 100;
+    }
+    nav.show {
+      display: flex;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    nav a {
+      color: #8bc34a;
+      margin: 10px 0;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      border-left: 4px solid transparent;
+      padding-left: 10px;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+    nav a:hover {
+      color: #d1e79a;
+      border-color: #d1e79a;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 420px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      margin-bottom: 50px;
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      filter: brightness(0.3);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+    }
+
+    .hero-content h2 {
+      font-size: 3em;
+      margin-bottom: 12px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+    }
+
+    .hero-content p {
+      font-size: 1.4em;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    /* Language Switcher Buttons */
+    #language-switcher {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 200;
+    }
+
+    #language-switcher button {
+      background-color: #8bc34a;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      padding: 6px 12px;
+      margin-left: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #language-switcher button.active,
+    #language-switcher button:hover {
+      background-color: #76a842;
+    }
+
+    /* Sections */
+    section {
+      padding: 50px 25px;
+      max-width: 1100px;
+      margin: 50px auto;
+      background-color: #2f2f2f;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+
+    h3 {
+      margin-bottom: 25px;
+      border-bottom: 3px solid #8bc34a;
+      padding-bottom: 8px;
+    }
+
+    /* Services */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;           /* Reduzi o espaçamento */
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #222;
+      padding: 25px;
+      flex: 1 1 30%;       /* Cards ocupam 30% cada um */
+      max-width: 300px;    /* Não crescem além de 300px */
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: default;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(166, 216, 84, 0.6);
+    }
+
+    /* Ajuste para imagens bem balanceadas */
+    .card img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+    .card img:hover {
+      transform: scale(1.05);
+    }
+
+    .card h4 {
+      color: #c9e2a3;
+      margin-bottom: 12px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .card p {
+      color: #dceec1;
+      font-size: 1em;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      text-align: center;
+      padding: 30px 20px;
+      color: #fff;
+      border-top: 3px solid #8bc34a;
+      font-weight: 500;
+      box-shadow: 0 -6px 12px rgba(0,0,0,0.3);
+      margin-top: 50px;
+    }
+
+    /* Footer & WhatsApp Button */
+    .whatsapp-link,
+    a.back {
+      background-color: #8bc34a;
+      color: #000;
+      padding: 14px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      margin-top: 25px;
+      box-shadow: 0 6px 14px rgba(166, 216, 84, 0.7);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatsapp-link:hover,
+    a.back:hover {
+      background-color: #76a842;
+      box-shadow: 0 9px 20px rgba(118, 168, 66, 0.9);
+    }
+
+    /* Social Icons */
+    a i {
+      color: #eee;
+      transition: color 0.3s ease;
+      margin-right: 12px;
+      font-size: 1.8rem;
+    }
+
+    a:hover i.fa-facebook { color: #3b5998; }
+    a:hover i.fa-instagram { color: #e1306c; }
+    a:hover i.fa-whatsapp { color: #25d366; }
+    a:hover i.fa-youtube { color: #d12828; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        flex: 1 1 80%;
+        max-width: 80%;
+      }
+      nav {
+        top: 60px;
+        right: 15px;
+        padding: 15px 20px;
+        min-width: 140px;
+      }
+      .hero-content h2 {
+        font-size: 2.4em;
+      }
+      .hero-content p {
+        font-size: 1.1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 15px 20px;
+      }
+      .hero {
+        height: 350px;
+      }
+      .hero-content h2 {
+        font-size: 1.9em;
+      }
+      .hero-content p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo-jjm.jpeg" alt="Logo JJM" class="logo-img" />
+  </div>
+
+  <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+
+  <nav id="main-menu">
+    <a href="#about" data-key="nav_about">Sobre</a>
+    <a href="#services" data-key="nav_services">Serviços</a>
+    <a href="#contact" data-key="nav_contact">Contacto</a>
+    <a href="Nossos Trabalhos.html" target="_blank" data-key="nav_cases">Nossos Trabalhos</a>
+  </nav>
+</header>
+
+<div id="language-switcher">
+  <button id="pt-btn">PT</button>
+  <button id="en-btn">EN</button>
+</div>
+<section class="hero">
+  <video 
+    muted 
+    autoplay 
+    loop 
+    playsinline 
+    preload="auto" 
+    poster="images/thumb.jpg" 
+    class="hero-video"
+  >
+    <source src="images/VIDEO-2025-06-03-12-32-58.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeos HTML5.
+  </video>
+  <div class="hero-content">
+    <h2 data-key="hero_title">Laboratório JJM</h2>
+    <p data-key="hero_subtitle">Excelência em Prótese Dentária</p>
+  </div>
+</section>
+
+<section id="services">
+  <h3 data-key="services_title">Os Nossos Serviços</h3>
+  <div class="services">
+    <div class="card">
+      <img src="images/IMG_1094.jpeg" alt="Prótese Fixa" />
+      <h4 data-key="service1_title">Prótese Fixa</h4>
+      <p data-key="service1_desc">Alta qualidade, estética e durabilidade com materiais modernos. Ideal para quem busca estabilidade e aparência natural.</p>
+    </div>
+    <div class="card">
+      <img src="images/e8d3b736-146c-407c-96c5-0b48bade66f9.jpeg" alt="Próteses Removíveis" />
+      <h4 data-key="service2_title">Próteses Removíveis</h4>
+      <p data-key="service2_desc">Opções versáteis e confortáveis para reabilitação oral com estética natural e funcionalidade.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h3 data-key="about_title">Sobre Nós</h3>
+  <p data-key="about_desc">
+    Desde 2014, o <strong>Laboratório JJM</strong> é referência em próteses dentárias. Trabalhamos com dedicação e precisão para oferecer soluções que combinam tecnologia, estética e conforto — sempre com foco na saúde e bem-estar do paciente.
+  </p>
+  <p data-key="about_more">
+    Atendemos tanto clínicas e dentistas como também pacientes que procuram qualidade e confiança em seus tratamentos. Produzimos diferentes tipos de próteses, como <strong>fixas</strong> e <strong>removíveis</strong>, utilizando materiais modernos e seguros.
+  </p>
+  <p data-key="about_team">
+    A nossa equipa é formada por técnicos especializados que passam por formações contínuas, acompanhando as inovações do setor odontológico. No Laboratório JJM, cada detalhe importa — desde o atendimento até a finalização de cada peça protética.
+  </p>
+  <p data-key="about_invite">
+    Se procura um laboratório que alia experiência, inovação e compromisso com resultados reais, conte com o Laboratório JJM. Estamos prontos para transformar sorrisos com qualidade, precisão e profissionalismo.
+  </p>
+</section>
+
+<section id="location">
+  <h3 data-key="location_title">Localização</h3>
+  <p><strong data-key="location_label">Endereço:</strong> Rua da Suavinha 399, 4440-572 Valongo, Portugal</p>
+  <iframe
+    src="https://www.google.com/maps?q=Rua%20da%20Suavinha%20399%2C%204440-572%20Valongo%2C%20Portugal&output=embed"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+  ></iframe>
+</section>
+
+<section id="contact">
+  <h3 data-key="contact_title">Contacto</h3>
+  <p>
+    <strong data-key="contact_email1">Email:</strong> labjjm@gmail.com<br>
+    <strong data-key="contact_email2">Email:</strong> info@labjjm.com<br>
+    <strong data-key="contact_phone1">Telefone:</strong> +351 918 028 291<br>
+    <strong data-key="contact_phone2">Telefone:</strong> +351 911 196 435
+  </p>
+
+  <a href="https://www.facebook.com/share/1L6WqSVaSW/?mibextid=wwXIfr" target="_blank">
+    <i class="fab fa-facebook fa-2x"></i>
+  </a>
+  <a href="https://www.instagram.com/mdentallab_marco_jorge/" target="_blank">
+    <i class="fab fa-instagram fa-2x"></i>
+  </a>
+  <a href="https://wa.me/+351918028291?text=Olá!%20Gostaria%20de%20informações%20sobre%20as%20próteses." target="_blank">
+    <i class="fab fa-whatsapp fa-2x"></i>
+  </a>
+  <a href="https://www.youtube.com/@labjjm3325" target="_blank">
+    <i class="fab fa-youtube fa-2x"></i>
+  </a>
+</section>
+
+<footer>
+  <h3 data-key="footer_title">Horário de Atendimento</h3>
+  <p data-key="footer_weekday">Segunda a Sexta: 9:00h – 13:00h | 14:00h – 18:00h</p>
+  <p data-key="footer_weekend">Sábado e Domingo: Fechado</p>
+  <p>© 2025 Laboratório JJM, Marco Monteiro, Valongo.</p>
+</footer>
+
+<script>
+  // Objeto com todas as traduções usadas neste index
+  const texts = {
+    pt: {
+      nav_about: 'Sobre',
+      nav_services: 'Serviços',
+      nav_contact: 'Contacto',
+      nav_cases: 'Nossos Trabalhos',
+      hero_title: 'Laboratório JJM',
+      hero_subtitle: 'Excelência em Prótese Dentária',
+      services_title: 'Os Nossos Serviços',
+      service1_title: 'Prótese Fixa',
+      service1_desc: 'Alta qualidade, estética e durabilidade com materiais modernos. Ideal para quem busca estabilidade e aparência natural.',
+      service2_title: 'Próteses Removíveis',
+      service2_desc: 'Opções versáteis e confortáveis para reabilitação oral com estética natural e funcionalidade.',
+      about_title: 'Sobre Nós',
+      about_desc: 'Desde 2014, o Laboratório JJM é referência em próteses dentárias. Trabalhamos com dedicação e precisão para oferecer soluções que combinam tecnologia, estética e conforto — sempre com foco na saúde e bem-estar do paciente.',
+      about_more: 'Atendemos tanto clínicas e dentistas como também pacientes que procuram qualidade e confiança em seus tratamentos. Produzimos diferentes tipos de próteses, como fixas e removíveis, utilizando materiais modernos e seguros.',
+      about_team: 'A nossa equipa é formada por técnicos especializados que passam por formações contínuas, acompanhando as inovações do setor odontológico. No Laboratório JJM, cada detalhe importa — desde o atendimento até a finalização de cada peça protética.',
+      about_invite: 'Se procura um laboratório que alia experiência, inovação e compromisso com resultados reais, conte com o Laboratório JJM. Estamos prontos para transformar sorrisos com qualidade, precisão e profissionalismo.',
+      location_title: 'Localização',
+      location_label: 'Endereço:',
+      contact_title: 'Contacto',
+      contact_email1: 'Email:',
+      contact_email2: 'Email:',
+      contact_phone1: 'Telefone:',
+      contact_phone2: 'Telefone:',
+      footer_title: 'Horário de Atendimento',
+      footer_weekday: 'Segunda a Sexta: 9:00h – 13:00h | 14:00h – 18:00h',
+      footer_weekend: 'Sábado e Domingo: Fechado'
+    },
+    en: {
+      nav_about: 'About',
+      nav_services: 'Services',
+      nav_contact: 'Contact',
+      nav_cases: 'Our Work',
+      hero_title: 'JJM Laboratory',
+      hero_subtitle: 'Excellence in Dental Prosthetics',
+      services_title: 'Our Services',
+      service1_title: 'Fixed Prosthesis',
+      service1_desc: 'High quality, aesthetics, and durability with modern materials. Ideal for patients seeking stability and a natural appearance.',
+      service2_title: 'Removable Prostheses',
+      service2_desc: 'Versatile, comfortable solutions for dental rehabilitation with a natural look and functionality.',
+      about_title: 'About Us',
+      about_desc: 'Since 2014, JJM Laboratory has been a reference in dental prosthetics. We work with dedication and precision to offer solutions that combine technology, aesthetics, and comfort—always focusing on the patient’s health and well-being.',
+      about_more: 'We serve both clinics and dentists, as well as patients seeking quality and trust in their treatments. We produce different types of prostheses, such as fixed and removable, using modern and safe materials.',
+      about_team: 'Our team consists of specialized technicians who undergo continuous training, keeping up with innovations in the dental field. At JJM Laboratory, every detail matters—from customer service to the finalization of each prosthetic piece.',
+      about_invite: 'If you are looking for a laboratory that combines experience, innovation, and commitment to real results, count on JJM Laboratory. We are ready to transform smiles with quality, precision, and professionalism.',
+      location_title: 'Location',
+      location_label: 'Address:',
+      contact_title: 'Contact',
+      contact_email1: 'Email:',
+      contact_email2: 'Email:',
+      contact_phone1: 'Phone:',
+      contact_phone2: 'Phone:',
+      footer_title: 'Opening Hours',
+      footer_weekday: 'Monday to Friday: 9:00 AM – 1:00 PM | 2:00 PM – 6:00 PM',
+      footer_weekend: 'Saturday & Sunday: Closed'
+    }
+  };
+
+  function changeLanguage(lang) {
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (texts[lang][key]) {
+        el.textContent = texts[lang][key];
+      }
+    });
+  }
+
+ 
+  const savedLang = localStorage.getItem('jjmLang') || 'pt';
+  changeLanguage(savedLang);
+
+  
+  const langButtons = document.querySelectorAll('#language-switcher button');
+  langButtons.forEach(btn => {
+    const isActive = (savedLang === 'pt' && btn.id === 'pt-btn') ||
+                     (savedLang === 'en' && btn.id === 'en-btn');
+    btn.classList.toggle('active', isActive);
+  });
+  document.documentElement.lang = savedLang;
+
+  
+  langButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedLang = (button.id === 'pt-btn') ? 'pt' : 'en';
+      changeLanguage(selectedLang);
+      localStorage.setItem('jjmLang', selectedLang);
+      langButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      document.documentElement.lang = selectedLang;
+    });
+  });
+
+  // Função de alternar menu hambúrguer
+  function toggleMenu() {
+    const menu = document.getElementById('main-menu');
+    menu.classList.toggle('show');
+  }
+
+  // Fecha o menu se clicar fora dele
+  document.addEventListener('click', function (event) {
+    const menu = document.getElementById('main-menu');
+    const toggle = document.querySelector('.menu-toggle');
+    if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+      menu.classList.remove('show');
+    }
+  });
+</script>
+</body>
+</html>

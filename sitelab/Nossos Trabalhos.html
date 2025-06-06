@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-key="pageTitle">Nossos Trabalhos | Laboratório JJM</title>
+  <style>
+   
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #525252;
+      color: white;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #8bc34a;
+      border-bottom: 2px solid #8bc34a;
+      padding-bottom: 10px;
+      text-align: left;
+      font-size: 2.2em;
+      margin-top: 0;
+    }
+    p {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      font-size: 1.1em;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .gallery-item {
+      background-color: #222;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 800px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    }
+    .before-after {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .before-after .image-container {
+      flex: 1 1 45%;
+      max-width: 45%;
+      text-align: center;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .before-after img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+    }
+    .image-label {
+      margin-top: 5px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    .gallery-item p {
+      margin-top: 10px;
+      font-size: 0.95em;
+      text-align: center;
+      color: #ccc;
+    }
+    .video-section {
+      background-color: #222;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .video-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    }
+    .video-section video {
+      width: 100%;
+      border-radius: 8px;
+    }
+    a.back {
+      display: inline-block;
+      margin: 30px auto 0;
+      background-color: #8bc34a;
+      color: #000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    a.back:hover {
+      background-color: #76a842;
+      transform: translateY(-3px);
+    }
+    @media (max-width: 600px) {
+      .before-after .image-container {
+        max-width: 100%;
+      }
+      .gallery-item, .video-section {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <h2 data-key="title">Nossos Trabalhos</h2>
+  <p data-key="descricao">Confira alguns dos nossos casos mais recentes em prótese dentária:</p>
+
+  <!-- Galeria -->
+  <div class="gallery">
+    <div class="gallery-item">
+      <div class="before-after">
+        <div class="image-container">
+          <img src="images/e3464611-0b3b-433d-a9ff-1117dac2f9f0.jpeg" alt="Antes">
+          <div class="image-label" data-key="antes"></div>
+        </div>
+        <div class="image-container">
+          <img src="images/6841cc76-f252-48ed-81ec-1a1eb3d5b85f.jpeg" alt="Depois">
+          <div class="image-label" data-key="depois"></div>
+        </div>
+      </div>
+      <p data-key="desc1">Prótese fixa – antes e depois</p>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <div class="before-after">
+        <div class="image-container">
+          <img src="images/688500c6-2718-4861-bfa5-03ad45448532.jpeg" alt="Antes">
+          <div class="image-label" data-key="antes"></div>
+        </div>
+        <div class="image-container">
+          <img src="images/be1e1d62-0dd3-4588-962b-c1b610a2555d.jpeg" alt="Depois">
+          <div class="image-label" data-key="depois"></div>
+        </div>
+      </div>
+      <p data-key="desc2">Prótese Carga Imediata</p>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <div class="before-after">
+        <div class="image-container">
+          <img src="images/38933700-6e6d-42b2-a599-af4e01c1b83e.jpeg" alt="Antes">
+          <div class="image-label" data-key="antes"></div>
+        </div>
+        <div class="image-container">
+          <img src="images/7bd6367d-3c43-4eeb-9ea2-2847cf1da805.jpeg" alt="Depois">
+          <div class="image-label" data-key="depois"></div>
+        </div>
+      </div>
+      <p data-key="desc3">Prótese Fixa</p>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <div class="before-after">
+        <div class="image-container">
+          <img src="images/IMG_1102.jpeg" alt="Antes">
+          <div class="image-label" data-key="antes"></div>
+        </div>
+        <div class="image-container">
+          <img src="images/IMG_1103.jpeg" alt="Depois">
+          <div class="image-label" data-key="depois"></div>
+        </div>
+      </div>
+      <p data-key="desc4">Prótese Fixa</p>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <div class="before-after">
+        <div class="image-container">
+          <img src="images/IMG_1100.jpeg" alt="Antes">
+          <div class="image-label" data-key="antes"></div>
+        </div>
+        <div class="image-container">
+          <img src="images/IMG_1098.jpeg" alt="Depois">
+          <div class="image-label" data-key="depois"></div>
+        </div>
+      </div>
+      <p data-key="desc5">Prótese Removível</p>
+    </div>
+  </div>
+
+  <!-- Vídeos -->
+  <div class="video-section">
+    <video muted autoplay loop playsinline>
+      <source src="images/e52e92b7-0af8-4ebe-84f9-4c55f09d808d.mp4" type="video/mp4" />
+    </video>
+    <p data-key="video1">Bi-Maxilar All-On-4 e All-On-6 Zirconia</p>
+  </div>
+
+  <div class="video-section">
+    <video muted autoplay loop playsinline>
+      <source src="images/0ccd2bec-7226-42fa-afb5-506a4756e15a.mp4" type="video/mp4" />
+    </video>
+    <p data-key="video2">Prótese Zirconia e Hibrida</p>
+  </div>
+
+  <!-- Botão Voltar -->
+  <div style="text-align: center;">
+    <a href="index.html" class="back" data-key="voltar">← Voltar à Página Inicial</a>
+  </div>
+
+  <!-- Script de tradução -->
+  <script>
+    const textos = {
+      pt: {
+        pageTitle: 'Nossos Trabalhos | Laboratório JJM',
+        title: 'Nossos Trabalhos',
+        descricao: 'Confira alguns dos nossos casos mais recentes em prótese dentária.',
+        antes: 'Antes',
+        depois: 'Depois',
+        desc1: 'Prótese fixa – antes e depois',
+        desc2: 'Prótese Carga Imediata',
+        desc3: 'Prótese Fixa',
+        desc4: 'Prótese Fixa',
+        desc5: 'Prótese Removível',
+        video1: 'Prótese Zirconia e Hibrida',
+        video2: 'Bi-Maxilar Inferior ALL-On-4 e Superior ALL-On-6 Zirconia',
+        voltar: '← Voltar à Página Inicial'
+      },
+      en: {
+        pageTitle: 'Our Work | JJM Laboratory',
+        title: 'Our Work',
+        descricao: 'Check out some of our most recent dental prosthetic cases.',
+        antes: 'Before',
+        depois: 'After',
+        desc1: 'Fixed Prosthesis – Before and After',
+        desc2: 'Immediate Load Prosthesis',
+        desc3: 'Fixed Prosthesis',
+        desc4: 'Fixed Prosthesis',
+        desc5: 'Removable Prosthesis',
+        video1: 'Zirconia and Hybrid Prosthesis',
+        video2: 'Inferior ALL-On-4 and Superior ALL-On-6 Zirconia',
+        voltar: '← Back to Home Page'
+      }
+    };
+
+    function aplicarIdioma(lang) {
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (textos[lang][key]) {
+          if (el.tagName === 'TITLE') {
+            document.title = textos[lang][key];
+          } else {
+            el.textContent = textos[lang][key];
+          }
+        }
+      });
+    }
+
+    // Agora usa a mesma chave localStorage que o index.html grava: "jjmLang"
+    const idiomaSalvo = localStorage.getItem('jjmLang') || 'pt';
+    aplicarIdioma(idiomaSalvo);
+  </script>
+
+</body>
+</html>
